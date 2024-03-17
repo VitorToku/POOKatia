@@ -6,7 +6,16 @@ public abstract class Veiculo implements IVendas {
 	private double preco;
 	private boolean disponivel;
 	private Pessoa proprietario;
-	
+
+	// Implementação do método vender da interface IVendas
+
+	@Override
+	public void vender(Pessoa comprador){		
+		this.disponivel = false;
+		this.proprietario = comprador;
+	}
+
+	//Getters e Setters
 	public boolean isDisponivel() {
 		return disponivel;
 	}
@@ -36,11 +45,6 @@ public abstract class Veiculo implements IVendas {
 	}
 	public double getPreco() {
 		return preco;
-	}
-	
-	@Override
-	public void vender(){
-		this.disponivel = false;
-	}
+	}		
 	
 }

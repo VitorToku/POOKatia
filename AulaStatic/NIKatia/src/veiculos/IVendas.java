@@ -1,5 +1,5 @@
 package veiculos;
 
 public interface IVendas {
-	void vender();
+	void vender(Pessoa comprador);
 }

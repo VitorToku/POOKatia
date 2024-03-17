@@ -9,12 +9,20 @@ public class TesteVeiculos {
 		
 		//Cria um carro e uma pessoa que é dona dele
 		
-		Pessoa pessoa = new Pessoa("Vitor", 1594683, 25);
+		Pessoa vitor = new Pessoa("Vitor", 1594683, 25);
 		
-		Carro carro = new Carro("Uno", 2016, 40.054, pessoa, 4);
+		Carro carro = new Carro("Uno", 2016, 40.054, vitor, 4);
+
+		//Como foi declarado um método toString, posso imprimir o objeto direto 
+		System.out.println(moto);
+		System.out.println(carro); 
 		
-		//Vende a moto criada
-		moto.vender();
+		//Vende a moto criada para a pessoa Vitor
+		
+		moto.vender(vitor);
+
+		System.out.println(moto);
+	
 	}
 
 }
